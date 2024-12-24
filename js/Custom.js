@@ -1,3 +1,12 @@
+// Thêm vào đầu file
+document.addEventListener('DOMContentLoaded', function() {
+    // Xử lý khi có bất kỳ tương tác nào từ người dùng
+    document.addEventListener('click', function() {
+        if (Howler.ctx && Howler.ctx.state === 'suspended') {
+            Howler.ctx.resume();
+        }
+    });
+});
 var sound = new Howl({
     urls: ['song/background.mp3'],
     loop: true
